@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-#change 1
-#change 3
-#change 4
-#change 6
+#new change
 stuff = {'gold coin': 42, 'rope': 1}
 
 def displayInventory(stuff):
