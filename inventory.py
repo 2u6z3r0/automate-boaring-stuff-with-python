@@ -2,6 +2,7 @@
 #change 1
 #change 3
 #change 4
+#change 5
 stuff = {'gold coin': 42, 'rope': 1}
 
 def displayInventory(stuff):
