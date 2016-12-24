@@ -12,4 +12,4 @@ for i in range(len(lines)):     #loop through all indexes
 
 newText = '\n'.join(lines)
 pyperclip.copy(newText)
-print('added bullet point infront of every new line, paste it to see')
+print('added bullet point in front of every new line, paste it to see')
