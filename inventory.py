@@ -9,12 +9,12 @@ def displayInventory(stuff):
     :return: Nothing, but it prints all items and respective quantity and total quantity(sum of all itmes qty)
     '''
 
-    print("Inventory")
+    print("Inventory".center(30,'='))
     totalCount = 0
     for k, v in stuff.items():
-        print('{} {}'.format(str(v), k))
+        print(k.ljust(25) + str(v).rjust(5))
         totalCount += v
-    print('Total number of items : {}'.format(totalCount))
+    print('Total number of items'.ljust(25) + str(totalCount).rjust(5))
 
 dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
 
