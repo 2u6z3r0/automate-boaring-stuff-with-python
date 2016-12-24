@@ -17,4 +17,3 @@ if account in passwords:
     print('Password for {} is copied to clipboard'.format(account))
 else:
     print('there is no account named ' + account)
-
