@@ -24,7 +24,7 @@ import re
 # phoneNumRegex = re.compile('\d\d\d\-\d\d\d-\d\d\d\d')
 phoneNumRegex = re.compile('(\d\d\d)-(\d\d\d-\d\d\d\d)') #to group certain text use paranthesis
 mo = phoneNumRegex.search('My phone number is 444-123-6789')
-print('Phone number found - ',mo.group())
+print('Phone number found - ', mo.group())
 print(mo.groups())
 print('Area code is - ', mo.group(1))
 print(mo.group(2))
@@ -81,7 +81,7 @@ print(mo.group())
 
 haRegex = re.compile('(ha){2,4}?') #matches to 'ha' repeated 2 to 4 times i.e 'haha', 'hahaha', 'hahahaha'
 mo = haRegex.search('hahahahahaha') #matches the 'haha' as its greedy-matching
-# print(type(mo))            #just for curiosity i checked return type of haRegex.search, and its of type '_sre.SRE_Match'
+# print(type(mo))            #just for curiosity i checked return type of search(), and its of type '_sre.SRE_Match'
 print(mo.group())
 
 phoneNumRegex = re.compile('(\d\d\d)-(\d\d\d-\d\d\d\d)')
