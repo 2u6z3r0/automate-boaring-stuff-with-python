@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-#mybranch change
-#master change
+#chapter 5 exercise
+
 stuff = {'gold coin': 42, 'rope': 1}
 
 def displayInventory(stuff):
@@ -9,12 +9,12 @@ def displayInventory(stuff):
     :return: Nothing, but it prints all items and respective quantity and total quantity(sum of all itmes qty)
     '''
 
-    print("Inventory".center(30,'='))
+    print("Inventory:")
     totalCount = 0
     for k, v in stuff.items():
-        print(k.ljust(25) + str(v).rjust(5))
+        print(v,k)
         totalCount += v
-    print('Total number of items'.ljust(25) + str(totalCount).rjust(5))
+    print('Total number of items ' + str(totalCount))
 
 dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
 
