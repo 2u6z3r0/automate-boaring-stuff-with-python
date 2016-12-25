@@ -2,14 +2,20 @@
 #chapter 7 examples all in a single file
 import re
 
-# \d - matches digit
+# \d - numeric digit 0-9
+# \D - any character that is not a numeric digit 0-9
+# \w - any letter, digit, or the underscore charecter
+# \W - any character that is not letter, digit, underscore
+# \s - any space,tab, or new line character
+# \S - any character this is not space,tab,new line character
 # ? - 0 or 1 isinstance matching
 # * - 0 or more isinstance
 # + - 1 or more instance
-#{2,4} - repeat 2 to 4 times, greedy matching - means matches the longest string. ex-(ha){2,4} matches 'hahahaha'
-#{2,4}? - repeat 2 to 4 times, but its non-greedy matching - means matches the shortest string. ex-(ha){2,4} matches 'haha'
-# phoneNumRegex = re.compile('\d\d\d\-\d\d\d-\d\d\d\d')
+# {2,4} - repeat 2 to 4 times, greedy matching - means matches the longest string. ex-(ha){2,4} matches 'hahahaha'
+# {2,4}? - repeat 2 to 4 times, but its non-greedy matching - means matches the shortest string. ex-(ha){2,4} matches 'haha'
 
+
+# phoneNumRegex = re.compile('\d\d\d\-\d\d\d-\d\d\d\d')
 phoneNumRegex = re.compile('(\d\d\d)-(\d\d\d-\d\d\d\d)') #to group certain text use paranthesis
 mo = phoneNumRegex.search('My phone number is 444-123-6789')
 print('Phone number found - ',mo.group())
