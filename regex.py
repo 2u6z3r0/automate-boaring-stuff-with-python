@@ -8,11 +8,17 @@ import re
 # \W - any character that is not letter, digit, underscore
 # \s - any space,tab, or new line character
 # \S - any character this is not space,tab,new line character
+# . - matches anycharacter, except newline character
 # ? - 0 or 1 isinstance matching
 # * - 0 or more isinstance
 # + - 1 or more instance
 # {2,4} - repeat 2 to 4 times, greedy matching - means matches the longest string. ex-(ha){2,4} matches 'hahahaha'
 # {2,4}? - repeat 2 to 4 times, but its non-greedy matching - means matches the shortest string. ex-(ha){2,4} matches 'haha'
+# [aeAE] - custom character class, matches all the character specified within []
+# [^aeAE] - matches all the characters other than the character specified within []
+# ^ab - matches to 'ab' at the beginning of the search text
+# ab$ - matches to text ending with ab at the end of the matching text
+
 
 
 # phoneNumRegex = re.compile('\d\d\d\-\d\d\d-\d\d\d\d')
