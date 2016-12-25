@@ -8,7 +8,8 @@ lstripRegex = re.compile(r'\s+$')
 
 def regStrip(text, char = None):
     if char != None:
-        text = re.sub(char, '', text)
+        text = re.sub(r'^{}+'.format(char), '', text)
+        text = re.sub(r'{}+$'.format(char), '', text)
     else:
         newText = rstripRegex.sub('-', text)
         text = lstripRegex.sub('-', newText)
