@@ -31,10 +31,14 @@ elif len(sys.argv) == 2:
         pyperclip.copy(mcbExtendedShelf[sys.argv[1]])
 
     # delete all keywords i.e clear the shelve
-    elif sys.argv[1] == 'delete'
+    elif sys.argv[1] == 'delete':
         mcbExtendedShelf.clear()
 
-#print usage
+    # print usage
+    else:
+        usage()
+
+# print usage
 else:
     usage()
 
