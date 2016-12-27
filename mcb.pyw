@@ -21,9 +21,14 @@ if len(sys.argv) == 3 and sys.argv[1].lower() == 'save':
 elif sys.argv[1] == 'list':
     pyperclip.copy(str(list(mcbShelf.keys())))
 
-# copy content to clipboard
-elif sys.argv[1] in mcbShelf:
-    pyperclip.copy(mcbShelf[sys.argv[1]])
+elif len(sys.argv) == 2:
+    # copy content to clipboard
+    if sys.argv[1] in mcbShelf:
+        pyperclip.copy(mcbShelf[sys.argv[1]])
+
+    # print usage instruction
+    else:
+        usage()
 
 # print usage instruction
 else:
