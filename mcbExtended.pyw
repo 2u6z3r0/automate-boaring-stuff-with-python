@@ -21,12 +21,20 @@ if len(sys.argv) == 3 and sys.argv[1].lower() == 'save':
 elif len(sys.argv) == 3 and sys.argv[1].lower() == 'delete':
     del mcbExtendedShelf[sys.argv[2]]
 
-# list keyword
-elif sys.argv[1] == 'list':
-    pyperclip.copy(str(list(mcbExtendedShelf.keys())))
-# copy content to clipboard
-elif sys.argv[1] in mcbExtendedShelf:
-    pyperclip.copy(mcbExtendedShelf[sys.argv[1]])
+elif len(sys.argv) == 2:
+    # list keyword
+    if sys.argv[1] == 'list':
+        pyperclip.copy(str(list(mcbExtendedShelf.keys())))
+
+    # copy content to clipboard
+    elif sys.argv[1] in mcbExtendedShelf:
+        pyperclip.copy(mcbExtendedShelf[sys.argv[1]])
+
+    # delete all keywords i.e clear the shelve
+    elif sys.argv[1] == 'delete'
+        mcbExtendedShelf.clear()
+
+#print usage
 else:
     usage()
 
