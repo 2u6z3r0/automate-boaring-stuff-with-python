@@ -11,8 +11,8 @@ def regStrip(text, char = None):
         text = re.sub(r'^{}+'.format(char), '', text)
         text = re.sub(r'{}+$'.format(char), '', text)
     else:
-        newText = rstripRegex.sub('-', text)
-        text = lstripRegex.sub('-', newText)
+        newText = rstripRegex.sub('', text)
+        text = lstripRegex.sub('', newText)
     print(text)
 
 print('Enter the text')
